@@ -8,6 +8,10 @@
 + vue-router
 + element-plus
 + typescript
+## 目录
++ dist 打包后的目录
++ src 源代码目录
++ public 静态资源目录
 ## 运行方法
 1. npm install
 2. npm run dev

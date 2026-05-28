@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import { ref,watch, onUnmounted } from 'vue';
-  import { ElMessage } from 'element-plus';
   import { useRouter } from 'vue-router';
   import { Refresh, Help } from '@element-plus/icons-vue'
   const shuffleNums = ref<Array<number>>([]);
@@ -132,6 +131,7 @@
             header-class="titleText"
             modal-penetrable
             title="游戏结果"
+            :before-close="handleClose"
             body-class="contentText">
             <el-text class="contentText">游戏结果
               <el-text size="large" class="contentText" :type="gameResult?'success':'danger'">{{ gameResult?'成功':'失败' }}</el-text></el-text>
