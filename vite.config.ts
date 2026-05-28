@@ -28,5 +28,5 @@ export default defineConfig({
     Icons({
       autoInstall: true, // 自动安装缺失的图标包
     }),
-  ],base: '/pluzzle_square/'
+  ],base: '/pluzze_square/'
 })
