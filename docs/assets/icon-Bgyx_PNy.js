@@ -1,0 +1,1 @@
+import{o as e}from"./use-global-config-CF44U4m8.js";import{_ as t}from"./index-Cc9R8vNQ.js";var n=t([String,Object,Function]),r={Close:e};export{n,r as t};
