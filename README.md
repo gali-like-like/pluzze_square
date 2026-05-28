@@ -1,5 +1,15 @@
-# Vue 3 + TypeScript + Vite
-
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+# 苏特尔方格
+## 玩法
+1. 玩家根据数字从小到大的顺序，依次点击方格
+2. 玩家点击25个方格后，游戏结束
+3. 游戏结束后会显示游戏结果，以及用时
+## 框架
++ vue3
++ vue-router
++ element-plus
++ typescript
+## 运行方法
+1. npm install
+2. npm run dev
+## 打包方法
+npm run build
