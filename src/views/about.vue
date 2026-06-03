@@ -19,7 +19,7 @@
             </p>
         </div>
         <div class="footer">
-            <el-text type="info">游戏作者: <el-link type="primary" herf="https://github.com/gali-like-like">gali-like-like</el-link></el-text>
+            <el-text type="info">游戏作者: <el-link type="primary" target href="https://github.com/gali-like-like">gali-like-like</el-link></el-text>
             <el-text type="info">联系方式: <el-text type="success">1472993384@qq.com</el-text></el-text>
         </div>
     </div>

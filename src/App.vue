@@ -1,5 +1,7 @@
 <script setup lang="ts">
-  
+  import { Edit } from '@element-plus/icons-vue';
+  import { ref } from 'vue';
+  const visible = ref(false);
 </script>
 
 <template>
@@ -19,7 +21,11 @@
         <el-col :span="4">
           <router-link class="link" to="/about">关于</router-link>
         </el-col>
+        <el-col :span="4">
+          <el-link class="link" :icon="Edit" @click="() => visible = true">设置</el-link>
+        </el-col>
       </el-row>
+      <SettingDialog title="设置" :visible="visible" @update:visible="(val: boolean) => visible = val "></SettingDialog>
       <router-view></router-view>
     </div>
 </template>
@@ -48,7 +54,6 @@
     transition: color 0.3s; /* 添加过渡效果 */
   }
 
-  /* 鼠标悬停时的样式 */
   .link:hover {
     color: #409eff; 
   }
