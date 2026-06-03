@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { ref,watch, onUnmounted,inject } from 'vue';
+  import { ref,watch, onUnmounted } from 'vue';
   import { useRouter } from 'vue-router';
   import { Refresh, Help } from '@element-plus/icons-vue'
   const shuffleNums = ref<Array<number>>([]);
@@ -37,17 +37,6 @@
   watch(() => localStorage.getItem("volume"),(newVolume: string | null) => { 
     currentVolume.value = parseFloat(newVolume || "0.5");
   });
-  const loadVolume = (): void => { 
-    const saveVolume = localStorage.getItem('volume');
-    if(saveVolume) {
-      currentVolume.value = parseFloat(saveVolume);
-    } else {
-      currentVolume.value = 0.5;
-    }
-    if (audioHtml.value) {
-      audioHtml.value.volume = currentVolume.value;
-    }
-  }
 
   const shuffle = () : void => {
   // Fisher-Yates 洗牌算法示例
@@ -173,7 +162,7 @@
          <el-row>
             <el-col :span="4" v-show="false">
               <audio controls preload="metadata" ref="audioHtml">
-                <source src="@\assets\audio\叮叮声简短.mp3" ></source>
+                <source src="@/assets/audio/叮叮声简短.mp3" />
               </audio>
             </el-col>
          </el-row>
